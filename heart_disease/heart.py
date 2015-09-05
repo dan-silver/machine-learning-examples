@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn import svm
 
 # data from http://archive.ics.uci.edu/ml/datasets/Heart+Disease
-data =  np.loadtxt(fname = "heart_disease.csv", delimiter = ',')
+data =  np.loadtxt(fname = "heart_disease.csv", delimiter = ',', skiprows=1)
 
 # Extract the last column, which is the result we're trying to predict
 X, Y = data[:, :-1], data[:, -1]
